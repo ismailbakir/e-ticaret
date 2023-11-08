@@ -1,0 +1,29 @@
+docker-compose up -d
+
+docker-compose down
+
+# docker-compose da çalışan tüm sevislerin ortak logu
+docker-compose logs -f
+docker-compose logs -f postgres
+
+# çalışan çalışmayan tüm containerları görüntüleme
+docker ps -a
+
+# docker container silme, container_id ile gidebiliriz.
+docker rm 0902e1fa9322 container_id
+
+# çalışmayan tüm container ları toplu silme komutu
+docker system prune
+
+# sadece çalışan containerları görüntüleme
+docker ps
+
+# container durdurma
+docker stop 0902e1fa9322
+
+# container başlatma
+docker start 0902e1fa9322
+
+# containerları toplu durdurma
+docker stop hepsinin container_id ler
+
